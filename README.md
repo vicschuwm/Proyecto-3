@@ -6,9 +6,9 @@ En este proyecto se aplicaron los conceptos de prototipado simple, etiquetas est
 
 ## Planteamiento
 
-Construir una página landing para un negocio, debe incluirse:
+Construir una página landing para un negocio, donde debe incluirse:
 
--Un prototipado simple, en papel o utilizando un programa de dibujo, sobre cómo trabajarás tu sitio. Podrías utilizar https://draw.io si quieres evaluar una herramienta gratuita, fácil y confiable.
+-Prototipado simple, en papel o utilizando un programa de dibujo.
 -Muestra de los mensajes de negocio
 -Breve catálogo de productos
 -Incluir estas secciones en la interfaz: Header, Main, Products y footer.
