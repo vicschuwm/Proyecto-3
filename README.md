@@ -8,10 +8,10 @@ En este proyecto se aplicaron los conceptos de prototipado simple, etiquetas est
 
 Construir una página landing para un negocio, donde debe incluirse:
 
--Prototipado simple, en papel o utilizando un programa de dibujo.
--Muestra de los mensajes de negocio
--Breve catálogo de productos
--Incluir estas secciones en la interfaz: Header, Main, Products y footer.
+- Prototipado simple, en papel o utilizando un programa de dibujo.
+- Muestra de los mensajes de negocio
+- Breve catálogo de productos
+- Incluir estas secciones en la interfaz: Header, Main, Products y footer.
 
 ## Solución explicada paso a paso
 
