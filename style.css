@@ -1,0 +1,754 @@
+/* importar tipografias de google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #E1DFD8;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100
+}
+
+.logo {
+    position: relative;
+    height: auto;
+    width: 250px;
+    margin-left: 40px;
+}
+
+/* estilo para navegador */
+.navegador a {
+    position: relative;
+    font-size: 15px;
+    color: black;
+    font-weight: 400;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+/* estilo para navegador; lineas subrayadas en hover */
+
+.navegador a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: black;
+    transition: .3s;
+}
+
+.navegador a:hover:before {
+    width: 100%;
+}
+
+/* banner principal + texto */
+.banner {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.imgbanner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.content {
+    position: absolute;
+    top: 55%;
+    right: 0;
+    transform: translate(0%, -50%);
+    text-align: right;
+    padding: 20px;
+    padding-right: 80px;
+    color: #161513;
+}
+
+.title {
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-size: clamp(20px, 6vw, 90px);
+    line-height: 0.9em;
+    color: white;
+}
+
+#italic-text {
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-size: clamp(20px, 6vw, 90px);
+    line-height: 0.9em;
+    color: white;
+    font-style: italic;
+}
+
+/* texto de bajada banner */
+
+.textoinicio {
+    font-family: "Crimson Text", serif;
+    font-weight: 600;
+    font-size: clamp(30px, 4vw, 40px);
+    line-height: 1em;
+    color: #717366;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#italic-text-bajada {
+    font-family: "Crimson Text", serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: clamp(30px, 4vw, 40px);
+    line-height: 1em;
+    color: #717366;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* galeria servicios */
+
+.card-group {
+    display: flex;
+    align-items: center;
+    padding-bottom: 100px;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 300px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+    cursor: pointer;
+    position: center;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.card .layer {
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75%;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card .info {
+    position: absolute;
+    bottom: -50%;
+    padding: 15px;
+    padding-bottom: 20px;
+    opacity: 0;
+    transition: 0.5s bottom, 1.75s opacity;
+    color: white;
+    font-family: "Crimson Text", serif;
+}
+
+.info h1 {
+    font-size: 40px;
+    margin-top: 3px;
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.info p {
+    font-size: 12px;
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+
+.info button {
+    background: transparent;
+    border: 1px solid white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    margin-top: 8px;
+    color: white
+}
+
+.card:hover,
+.card:hover img,
+.card:hover layer {
+    transform: scale(1.1);
+}
+
+.card:hover > .layer {
+    opacity: 1;
+}
+
+.card:hover > .info {
+    bottom: 0;
+    opacity: 1;
+}
+
+.nosotros {
+    display: flex;
+    flex-direction: row;
+    background-color: #2D2F2A;
+    margin-bottom: 100px;
+}
+.imgnosotros {
+    width: 50%;
+}
+
+.nosotrosinfo {
+    margin-left: 2%;
+    align-content: center;
+}
+
+.nosotrosinfo h1 {
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 0.9em;
+    color: white;
+}
+
+.nosotrosinfo h2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 0.9em;
+    color: white;
+}
+
+.nosotrosinfo h2 #italic-text {
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 70px;
+    line-height: 0.9em;
+    color: white;
+}
+
+.nosotrosinfo p  {
+    width: 80%;
+    font-family: "Montserrat", serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.2em;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.nosotrosinfo button {
+    display: inline-block;
+    padding: .75rem 1.25rem;
+    border-radius: 10rem;
+    color: #fff;
+    background-color: #2D2F2A;
+    border: 1px solid white;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    transition: all .3s;
+    position: relative;
+    font-family: "Montserrat", serif;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+.nosotrosinfo button:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2D2F2A;
+    border-radius: 10rem;
+    z-index: -2;
+    }
+  
+    .nosotrosinfo  button:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: white;
+      color: black;
+      transition: all .3s;
+      border-radius: 10rem;
+      z-index: -1;
+    }
+  
+    .nosotrosinfo  button:hover {
+      color: #2D2F2A;
+      &:before {
+        width: 100%;
+      }
+    }
+
+
+/* galeria interactiva */
+
+.galeria {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 600px;
+    padding-bottom: 100px;
+}
+
+.item {
+    flex: 1;
+    height: 100%
+}
+
+.item:nth-child(1) {
+    background-image: url("resources/galeria1.jpg")
+}
+
+.item:nth-child(2) {
+    background-image: url("resources/galeria2.jpg")
+}
+
+.item:nth-child(3) {
+    background-image: url("resources/galeria3.jpg")
+}
+
+.item:nth-child(4) {
+    background-image: url("resources/galeria4.jpg")
+}
+
+.item:nth-child(5) {
+    background-image: url("resources/galeria5.jpg")
+}
+
+.item {
+    background-position: center;
+    background-size: cover;
+    transition: flex 0.8s ease;
+}
+
+.item:hover {
+    flex: 5;
+}
+
+ /* Sección clientes */
+
+.container {
+    max-width: 100%;
+    position: relative;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+  }
+
+  .contenttext h2 {
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 60px;
+    color: #717366;
+    flex-grow: 1;
+    width: 30%;
+    padding-left: 80px;
+  }
+
+  #italic-text-clientes {
+    font-family: "Crimson Text", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 60px;
+    color: #717366;
+}
+
+  .content2 {
+    flex-grow: 1;
+    width: 70%;
+  }
+  
+  .slider-wrapper {
+    position: relative;
+  }
+  
+  .slider-wrapper .slide-button {
+    position: absolute;
+    top: 50%;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: #000;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .slider-wrapper .slide-button:hover {
+    background: #404040;
+  }
+  
+  .slider-wrapper .slide-button#prev-slide {
+    left: -25px;
+    display: none;
+  }
+  
+  .slider-wrapper .slide-button#next-slide {
+    right: -25px;
+  }
+  
+  .slider-wrapper .image-list {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 18px;
+    font-size: 0;
+    list-style: none;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  
+  .slider-wrapper .image-list::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .slider-wrapper .image-list .image-item {
+    width: auto;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  
+  .container .slider-scrollbar {
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .slider-scrollbar .scrollbar-track {
+    background: #ccc;
+    width: 100%;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  .slider-scrollbar:hover .scrollbar-track {
+    height: 4px;
+  }
+  
+  .slider-scrollbar .scrollbar-thumb {
+    position: absolute;
+    background: #717366;
+    top: 0;
+    bottom: 0;
+    width: 20%;
+    height: 100%;
+    cursor: grab;
+    border-radius: inherit;
+  }
+  
+  .slider-scrollbar .scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+  }
+  
+  .slider-scrollbar .scrollbar-thumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+  }
+  
+
+  .contactform {
+    width: 85%;
+    background: #E1DFD8;
+    border: 1px solid #2D2F2A;
+    border-radius: 6px;
+    padding: 20px 60px 30px 40px;
+    margin-bottom: 100px;
+    display: grid;
+    margin: auto;
+    margin-bottom: 80px;
+  }
+  .contactform .contactinfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .contacticon {
+      width: 15%;
+  }
+  .contactform .contactinfo .left-side{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    margin-top: 15px;
+    position: relative;
+  }
+  .contactinfo .left-side::before{
+    content: '';
+    position: absolute;
+    height: 90%;
+    width: 1px;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #2D2F2A;
+  }
+  .contactinfo .left-side .details{
+    margin: 14px;
+    text-align: left;
+  }
+  .contactinfo .left-side .details i{
+    font-size: 30px;
+    color: #2D2F2A;
+    margin-bottom: 10px;
+  }
+  .contactinfo .left-side .details .topic{
+    font-size: 22px;
+    font-weight: 500;
+    color: #2D2F2A;
+    font-family: "Crimson Text", serif;
+    padding-bottom: 5px;
+    font-style: italic;
+  }
+  .contactinfo .left-side .details .text-one,
+  .contactinfo .left-side .details .text-two{
+    font-size: 14px;
+    color: #2D2F2A;
+    font-family: "Montserrat", serif;
+  }
+  .contactform .contactinfo .right-side{
+    width: 75%;
+    margin-left: 75px;
+    font-family: "Montserrat", serif;
+    font-size: 14px;
+  }
+  .contactinfo .right-side .topic-text{
+    font-size: 70px;
+    font-weight: 600;
+    color: #2D2F2A;
+    font-family: "Crimson Text", serif;
+    font-style: italic;
+    
+  }
+  .right-side .input-box{
+    height: 50px;
+    width: 100%;
+    margin: 12px 0;
+    font-family: "Montserrat", serif;
+    
+  }
+  .right-side .input-box input,
+  .right-side .input-box textarea{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: #E1DFD8;
+    border: 1px solid #2D2F2A;
+    border-radius: 6px;
+    padding: 0 15px;
+    resize: none;
+    font-family: "Montserrat", serif;
+    
+  }
+  
+  .right-side .input-box textarea{
+    padding-top: 6px;
+  }
+  .right-side .button{
+    display: inline-block;
+    margin-top: 12px;
+  }
+  .right-side .button input[type="button"]{
+    color: #fff;
+    font-family: "Montserrat", serif;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    padding: 8px 22px;
+    border-radius: 20px;
+    background: #2D2F2A;
+    cursor: pointer;
+  }
+  
+
+  
+/* texto con movimiento */
+
+.marquesina {
+    display: flex;
+    white-space: nowrap;
+    width: 100%;
+    height: clamp(3em, 10vw, 6em);
+    overflow: hidden;
+    font-family: sans-serif;
+    margin-top: 60px;
+    margin-bottom: 60px;
+ }
+
+
+.loop-text {
+    font-size: 80px;
+    font-weight: 400;
+    padding: 0 0.25em;
+    font-family: "Crimson Text", serif;
+    color: #717366;
+ }
+
+#italic-text-green {
+    font-family: "Crimson Text", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 0.9em;
+    color: #717366;
+    }
+
+ .loop-text {
+    animation: loopText 15s infinite linear;      
+}
+
+@keyframes loopText {
+
+  from {
+      transform: translateX(0);
+   }
+
+  to {
+      transform: translateX(-100%);
+   }
+
+}
+
+
+.footer {
+    background-color: #2D2F2A;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 60px;
+    margin: 0 auto;
+}
+
+.footer-left {
+    flex: 1;
+    text-align: left;
+}
+
+.logofooter {
+    width: 270px;
+}
+
+.footer-description {
+    margin: 20px 0;
+    font-size: 14px;
+    max-width: 300px;
+}
+
+.footer-social a {
+    margin-right: 15px;
+}
+
+.footer-social img {
+    width: 40px;
+}
+
+.footer-right {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+}
+
+.footer-links li {
+    margin-bottom: 20px;
+    font-size: 70px;
+}
+
+.footer-links li span {
+    margin-right: 10px;
+    font-size: 30px;
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Crimson Text", serif;
+    font-style: italic;
+}
+
+.footer-credits {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    border-top: 1px solid #555;
+}
